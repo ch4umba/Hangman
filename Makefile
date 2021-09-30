@@ -73,10 +73,10 @@ gtest_main.a : gtest-all.o gtest_main.o
 # function.
 
 testGameClass.o : $(USER_DIR)/testGameClass.cpp $(USER_SRC_DIR)/Game.cpp $(USER_SRC_DIR)/Themes.cpp $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/testGameClass.cpp $(USER_SRC_DIR)/Game.cpp $(USER_SRC_DIR)/Themes.cpp
+	$(CXX) -std=gnu++11 $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/testGameClass.cpp $(USER_SRC_DIR)/Game.cpp $(USER_SRC_DIR)/Themes.cpp
 
 testGameClass : testGameClass.o obj/Game.o obj/Themes.o gtest_main.a
-	$(CXX) -std=gnu++11 $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
 
 program: obj/main.o obj/Game.o obj/Themes.o
 	g++ -std=gnu++14 -o bin/program obj/main.o obj/Game.o obj/Themes.o
