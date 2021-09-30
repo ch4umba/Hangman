@@ -5,5 +5,5 @@ compiler: g++ -std=gnu++17
 script:
   - make
   - git ls-files src/ | xargs clang-format -i && git diff --exit-code
-  - git ls-files tests/testGameClass.cpp | xargs clang-format -i && git diff --exit-code
+  - git ls-files tests/ | xargs clang-format -i && git diff --exit-code
   - ./bin/program
