@@ -377,6 +377,8 @@ void Game::Menu()
             }
             if (i % 3 == 1) {
                 Settings();
+                clrscr();
+                outputMenu(i = 0);
             }
             if (i % 3 == 2) {
                 return;

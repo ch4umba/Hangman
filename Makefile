@@ -30,7 +30,7 @@ CXXFLAGS += -g -Wall -Wextra -pthread
 
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
-TESTS = testGameClass
+TESTS = test
 
 # All Google Test headers.  Usually you shouldn't change this
 # definition.
@@ -39,7 +39,7 @@ GTEST_HEADERS = $(GTEST_DIR)/include/gtest/*.h \
 
 # House-keeping build targets.
 
-all : $(TESTS) clean
+all : $(TESTS) Game clean
 
 clean :
 	rm -f gtest.a gtest_main.a *.o
@@ -72,14 +72,14 @@ gtest_main.a : gtest-all.o gtest_main.o
 # gtest_main.a, depending on whether it defines its own main()
 # function.
 
-testGameClass.o : $(USER_DIR)/testGameClass.cpp $(USER_SRC_DIR)/Game.cpp $(USER_SRC_DIR)/Themes.cpp $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/testGameClass.cpp $(USER_SRC_DIR)/Game.cpp $(USER_SRC_DIR)/Themes.cpp
+test.o : $(USER_DIR)/test.cpp $(USER_SRC_DIR)/Game.cpp $(USER_SRC_DIR)/Themes.cpp $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/test.cpp $(USER_SRC_DIR)/Game.cpp $(USER_SRC_DIR)/Themes.cpp
 
-testGameClass : testGameClass.o obj/Game.o obj/Themes.o gtest_main.a
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o bin/testGameClass
+test: test.o obj/Game.o obj/Themes.o gtest_main.a
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o bin/test
 
-program: obj/main.o obj/Game.o obj/Themes.o
-	g++ -std=gnu++14 -o bin/program obj/main.o obj/Game.o obj/Themes.o
+Game: obj/main.o obj/Game.o obj/Themes.o
+	g++ -std=gnu++14 -o bin/Game obj/main.o obj/Game.o obj/Themes.o
 
 obj/main.o: src/main.cpp
 	g++ -std=gnu++14 -c -o obj/main.o src/main.cpp
