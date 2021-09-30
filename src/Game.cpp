@@ -170,7 +170,11 @@ void Game::Play()
         if (c == '\033') {
             getch();
             switch (getch()) {
-                case 'B': gotoXY(i, j); defcolor(); cout << alpha[k];
+                case 'B':
+                {
+                    gotoXY(i, j);
+                    defcolor();
+                    cout << alpha[k];
                     if (k > 12) {
                         gotoXY(i, --j);
                         k -= 13;
@@ -182,7 +186,9 @@ void Game::Play()
                     setBGColor();
                     cout << alpha[k];
                     break;
+                }
                 case 'A':
+                {
                     gotoXY(i, j);
                     defcolor();
                     cout << alpha[k];
@@ -197,7 +203,9 @@ void Game::Play()
                     setBGColor();
                     cout << alpha[k];
                     break;
+                }
                 case 'D':
+                {
                     gotoXY(i, j);
                     defcolor();
                     cout << alpha[k];
@@ -212,7 +220,9 @@ void Game::Play()
                     setBGColor();
                     cout << alpha[k];
                     break;
+                }
                 case 'C':
+                {
                     gotoXY(i, j);
                     defcolor();
                     cout << alpha[k];
@@ -227,6 +237,7 @@ void Game::Play()
                     setBGColor();
                     cout << alpha[k];
                     break;
+                }
             }
         } else if (c == 10) {
             checkWord(i, j);
@@ -257,13 +268,17 @@ void Game::Settings()
             getch();
             switch (getch()) {
                 case 'A':
+                {
                     clrscr();
                     outputSettings(--i % 3);
                     break;
+                }
                 case 'B':
+                {
                     clrscr();
                     outputSettings(++i % 3);
                     break;
+                }
             }
         } else if (c == 10) {
             clrscr();
@@ -312,7 +327,7 @@ string Game::getTheme()
     if (k <= 0 || k > themes.themes.size()) {
         return "";
     }
-    for (int i = 0; i + 1 != k; i++, iter++) {}
+    for (int i = 0; i + 1 != k; i++, iter++) { continue; }
     clrscr();
     return iter->first;
 }
