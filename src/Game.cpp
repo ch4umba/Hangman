@@ -65,7 +65,7 @@ void Game::outputMenu(int i) {
     }
 }
 
-void Game::outputWord(const string& word) {
+void Game::outputWord(const string &word) {
     for (char i: word) {
         cout << ' ' << i << ' ';
     }
@@ -106,7 +106,7 @@ void Game::outputSettings(int i) {
     }
 }
 
-bool Game::isWin(const string& word) {
+bool Game::isWin(const string &word) {
     unsigned long int foundIndex = word.find('_');
     if (foundIndex != string::npos)
         return false;
@@ -274,7 +274,7 @@ void Game::Settings() {
     }
 }
 
-void Game::setWord(const string& theme) {
+void Game::setWord(const string &theme) {
     outWord.clear();
     word = themes.getWord(theme);
     outWord.resize(word.size(), '_');
@@ -285,7 +285,7 @@ string Game::getTheme() {
     auto iter = themes.themes.begin();
     cout << "List of topics:" << endl;
     int k = 1;
-    for (const auto& i: themes.themes) {
+    for (const auto &i: themes.themes) {
         cout << k++ << ". " << i.first << endl;
     }
     cout << endl << "Topic number:";
