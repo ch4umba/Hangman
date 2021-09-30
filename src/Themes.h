@@ -8,9 +8,9 @@
 #include <fstream>
 #include <iostream>
 #include <map>
-#include <vector>
 #include <string>
 #include <unistd.h>
+#include <vector>
 
 class Themes {
 private:
