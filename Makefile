@@ -79,13 +79,13 @@ testGameClass : testGameClass.o obj/Game.o obj/Themes.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
 
 program: obj/main.o obj/Game.o obj/Themes.o
-	g++ -std=c++14 -o bin/program obj/main.o obj/Game.o obj/Themes.o
+	g++ -std=gnu++14 -o bin/program obj/main.o obj/Game.o obj/Themes.o
 
 obj/main.o: src/main.cpp
-	g++ -std=c++14 -c -o obj/main.o src/main.cpp
+	g++ -std=gnu++14 -c -o obj/main.o src/main.cpp
 
 obj/Game.o: src/Game.cpp
-	g++ -std=c++14 -c -o obj/Game.o src/Game.cpp
+	g++ -std=gnu++14 -c -o obj/Game.o src/Game.cpp
 
 obj/Themes.o: src/Themes.cpp
-	g++ -std=c++14 -c -o obj/Themes.o src/Themes.cpp
+	g++ -std=gnu++14 -c -o obj/Themes.o src/Themes.cpp
