@@ -27,7 +27,7 @@ public:
 
     std::string getWord(const std::string& theme);
 
-    void addUserWord(std::string& theme);
+    void addUserWord(std::string theme);
 
     void addFileWords(std::string path);
 };

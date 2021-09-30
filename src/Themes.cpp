@@ -1,3 +1,4 @@
+
 //
 // Created by cool8 on 29.09.2021.
 //
@@ -21,8 +22,8 @@ std::vector<std::string> Themes::splitWords(std::string words) {
     return w;
 }
 
-bool Themes::check(std::string &word) {
-    for (char & i : word) {
+bool Themes::check(std::string& word) {
+    for (char& i : word) {
         if (!isalpha(i)) {
             return false;
         }
@@ -90,7 +91,7 @@ void Themes::addFileWords(const std::string& path) {
             if (iter == themes.end()) {
                 themes.insert(make_pair(theme, words));
             } else {
-                for (auto & word : words) {
+                for (auto& word : words) {
                     themes[theme].push_back(word);
                 }
             }
