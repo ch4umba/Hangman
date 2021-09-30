@@ -5,7 +5,8 @@
 
 #include "Themes.h"
 
-std::vector<std::string> Themes::splitWords(std::string words) {
+std::vector<std::string> Themes::splitWords(std::string words)
+{
     std::vector<std::string> w;
     std::string temp;
     for (unsigned int i = 0; i < words.size(); i++) {
@@ -22,7 +23,8 @@ std::vector<std::string> Themes::splitWords(std::string words) {
     return w;
 }
 
-bool Themes::check(std::string& word) {
+bool Themes::check(std::string& word)
+{
     for (char& i : word) {
         if (!isalpha(i)) {
             return false;
@@ -32,17 +34,20 @@ bool Themes::check(std::string& word) {
     return true;
 }
 
-Themes::Themes() {
+Themes::Themes()
+{
     std::vector<std::string> v;
     v.emplace_back("TRAMPOLINE");
     themes.insert(make_pair("SPORT", v));
 }
 
-std::string Themes::getWord(const std::string& theme) {
+std::string Themes::getWord(const std::string& theme)
+{
     return themes[theme][rand() % themes[theme].size()];
 }
 
-void Themes::addUserWord(std::string theme) {
+void Themes::addUserWord(std::string theme)
+{
     auto iter = themes.find(theme);
     if (!check(theme)) {
         std::cout << "ERROR!" << std::endl;
@@ -75,7 +80,8 @@ void Themes::addUserWord(std::string theme) {
     }
 }
 
-void Themes::addFileWords(const std::string& path) {
+void Themes::addFileWords(std::string path)
+{
     std::ifstream fin(path);
     if (fin.is_open()) {
         std::map<std::string, std::vector<std::string>>::iterator iter;

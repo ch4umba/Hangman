@@ -4,11 +4,13 @@
 
 #include "Game.h"
 
-int Game::gotoXY(int y, int x) {
+int Game::gotoXY(int y, int x)
+{
     return printf("\E[%d;%dH", x, y);
 }
 
-int Game::getch() {
+int Game::getch()
+{
     struct termios oldattr{};
     struct termios newattr{};
     int ch;
@@ -21,22 +23,34 @@ int Game::getch() {
     return (ch);
 }
 
-int Game::clrscr() { return printf("\E[H\E[J"); }
+int Game::clrscr()
+{
+    return printf("\E[H\E[J");
+}
 
-int Game::setFGColor() { return printf("\E[3%dm", 0); }
+int Game::setFGColor()
+{
+    return printf("\E[3%dm", 0);
+}
 
-int Game::setBGColor() { return printf("\E[4%dm", 7); }
+int Game::setBGColor()
+{
+    return printf("\E[4%dm", 7);
+}
 
-void Game::outputPhase(int i) {
+void Game::outputPhase(int i)
+{
     cout << phase[i];
 }
 
-int Game::defcolor() {
+int Game::defcolor()
+{
     printf("\E[0m");
     return 0;
 }
 
-void Game::outputAlphas() {
+void Game::outputAlphas()
+{
     for (int i = 0; i < 26; i++) {
         cout << alpha[i] << "   ";
         if (i == 12) {
@@ -45,7 +59,8 @@ void Game::outputAlphas() {
     }
 }
 
-void Game::outputMenu(int i) {
+void Game::outputMenu(int i)
+{
     cout << "Hangman!" << endl;
     cout << "_____________________________________" << endl;
     if (i == 0) {
@@ -65,13 +80,15 @@ void Game::outputMenu(int i) {
     }
 }
 
-void Game::outputWord(const string &word) {
+void Game::outputWord(const string& word)
+{
     for (char i: word) {
         cout << ' ' << i << ' ';
     }
 }
 
-bool Game::checkWord(int i, int j) {
+bool Game::checkWord(int i, int j)
+{
     bool flag = false;
     if (i > 0)
         i--;
@@ -87,7 +104,8 @@ bool Game::checkWord(int i, int j) {
     return flag;
 }
 
-void Game::outputSettings(int i) {
+void Game::outputSettings(int i)
+{
     cout << "Settings:" << endl;
     if (i == 0) {
         cout << "* 1. Add a new word" << endl;
@@ -106,14 +124,16 @@ void Game::outputSettings(int i) {
     }
 }
 
-bool Game::isWin(const string &word) {
+bool Game::isWin(const string& word)
+{
     unsigned long int foundIndex = word.find('_');
     if (foundIndex != string::npos)
         return false;
     return true;
 }
 
-void Game::Play() {
+void Game::Play()
+{
     string theme = getTheme();
     if (theme.empty()) {
         cout << "ERROR!" << endl;
@@ -229,7 +249,8 @@ void Game::Play() {
     }
 }
 
-void Game::Settings() {
+void Game::Settings()
+{
     clrscr();
     int i = 0;
     outputSettings(i % 3);
@@ -274,13 +295,15 @@ void Game::Settings() {
     }
 }
 
-void Game::setWord(const string &theme) {
+void Game::setWord(const string &theme)
+{
     outWord.clear();
     word = themes.getWord(theme);
     outWord.resize(word.size(), '_');
 }
 
-string Game::getTheme() {
+string Game::getTheme()
+{
     clrscr();
     auto iter = themes.themes.begin();
     cout << "List of topics:" << endl;
@@ -298,7 +321,8 @@ string Game::getTheme() {
     return iter->first;
 }
 
-void Game::Menu() {
+void Game::Menu()
+{
     clrscr();
     int i = 0;
     outputMenu(i % 3);
