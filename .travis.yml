@@ -1,9 +1,9 @@
 dist: xenial
 language: c++
-compiler: g++ -std=gnu++17
+compiler: g++
 
 script:
   - make
   - git ls-files src/ | xargs clang-format -i && git diff --exit-code
-  - git ls-files tests/ | xargs clang-format -i && git diff --exit-code
-  - ./bin/program
+  - git ls-files tests/ | git diff --exit-code
+  - ./bin/testGameClass
