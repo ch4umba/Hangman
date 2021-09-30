@@ -11,8 +11,7 @@ int Game::gotoXY(int y, int x)
 
 int Game::getch()
 {
-    struct termios oldattr{};
-    struct termios newattr{};
+    struct termios oldattr, newattr;
     int ch;
     tcgetattr(0, &oldattr);
     newattr = oldattr;
@@ -82,8 +81,8 @@ void Game::outputMenu(int i)
 
 void Game::outputWord(const string& word)
 {
-    for (char i: word) {
-        cout << ' ' << i << ' ';
+    for (int i = 0; i < word.size(); i++) {
+        cout << ' ' << word[i]   << ' ';
     }
 }
 
@@ -295,7 +294,7 @@ void Game::Settings()
     }
 }
 
-void Game::setWord(const string &theme)
+void Game::setWord(const string& theme)
 {
     outWord.clear();
     word = themes.getWord(theme);
@@ -308,7 +307,7 @@ string Game::getTheme()
     auto iter = themes.themes.begin();
     cout << "List of topics:" << endl;
     int k = 1;
-    for (const auto &i: themes.themes) {
+    for (const auto& i: themes.themes) {
         cout << k++ << ". " << i.first << endl;
     }
     cout << endl << "Topic number:";
@@ -316,7 +315,7 @@ string Game::getTheme()
     if (k <= 0 || k > themes.themes.size()) {
         return "";
     }
-    for (int i = 0; i + 1 != k; i++, iter++);
+    for (int i = 0; i + 1 != k; i++, iter++) {}
     clrscr();
     return iter->first;
 }
