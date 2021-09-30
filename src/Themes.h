@@ -18,18 +18,18 @@ private:
 
     static std::vector<std::string> splitWords(std::string words);
 
-    bool check(std::string &word);
+    bool check(std::string& word);
 
 public:
     friend class Game;
 
     Themes();
 
-    std::string getWord(const std::string &theme);
+    std::string getWord(const std::string& theme);
 
-    void addUserWord(std::string theme);
+    void addUserWord(std::string& theme);
 
-    void addFileWords(const std::string &path);
+    void addFileWords(std::string path);
 };
 
 #endif //UNTITLED1_THEMES_H
