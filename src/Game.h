@@ -173,5 +173,4 @@ public:
     bool checkWord(int i, int j);
 };
 
-
 #endif
