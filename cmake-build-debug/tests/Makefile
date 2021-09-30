@@ -223,29 +223,29 @@ __/src/Themes.cpp.s:
 	cd /cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Google_Tests_run.dir/build.make tests/CMakeFiles/Google_Tests_run.dir/__/src/Themes.cpp.s
 .PHONY : __/src/Themes.cpp.s
 
-testGameClass.o: testGameClass.cpp.o
-.PHONY : testGameClass.o
+test.o: test.cpp.o
+.PHONY : test.o
 
 # target to build an object file
-testGameClass.cpp.o:
-	cd /cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Google_Tests_run.dir/build.make tests/CMakeFiles/Google_Tests_run.dir/testGameClass.cpp.o
-.PHONY : testGameClass.cpp.o
+test.cpp.o:
+	cd /cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Google_Tests_run.dir/build.make tests/CMakeFiles/Google_Tests_run.dir/test.cpp.o
+.PHONY : test.cpp.o
 
-testGameClass.i: testGameClass.cpp.i
-.PHONY : testGameClass.i
+test.i: test.cpp.i
+.PHONY : test.i
 
 # target to preprocess a source file
-testGameClass.cpp.i:
-	cd /cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Google_Tests_run.dir/build.make tests/CMakeFiles/Google_Tests_run.dir/testGameClass.cpp.i
-.PHONY : testGameClass.cpp.i
+test.cpp.i:
+	cd /cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Google_Tests_run.dir/build.make tests/CMakeFiles/Google_Tests_run.dir/test.cpp.i
+.PHONY : test.cpp.i
 
-testGameClass.s: testGameClass.cpp.s
-.PHONY : testGameClass.s
+test.s: test.cpp.s
+.PHONY : test.s
 
 # target to generate assembly for a file
-testGameClass.cpp.s:
-	cd /cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Google_Tests_run.dir/build.make tests/CMakeFiles/Google_Tests_run.dir/testGameClass.cpp.s
-.PHONY : testGameClass.cpp.s
+test.cpp.s:
+	cd /cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Google_Tests_run.dir/build.make tests/CMakeFiles/Google_Tests_run.dir/test.cpp.s
+.PHONY : test.cpp.s
 
 # Help Target
 help:
@@ -266,9 +266,9 @@ help:
 	@echo "... __/src/Themes.o"
 	@echo "... __/src/Themes.i"
 	@echo "... __/src/Themes.s"
-	@echo "... testGameClass.o"
-	@echo "... testGameClass.i"
-	@echo "... testGameClass.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

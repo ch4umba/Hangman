@@ -280,7 +280,7 @@
 		<Unit filename="/cygdrive/c/Users/cool8/CLionProjects/untitled1/tests/lib/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/cool8/CLionProjects/untitled1/tests/testGameClass.cpp">
+		<Unit filename="/cygdrive/c/Users/cool8/CLionProjects/untitled1/tests/test.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/cool8/CLionProjects/untitled1/CMakeLists.txt">

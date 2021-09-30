@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/cygdrive/c/Users/cool8/CLionProjects/untitled1/src/Game.cpp" "/cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug/tests/CMakeFiles/Google_Tests_run.dir/__/src/Game.cpp.o"
   "/cygdrive/c/Users/cool8/CLionProjects/untitled1/src/Themes.cpp" "/cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug/tests/CMakeFiles/Google_Tests_run.dir/__/src/Themes.cpp.o"
-  "/cygdrive/c/Users/cool8/CLionProjects/untitled1/tests/testGameClass.cpp" "/cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug/tests/CMakeFiles/Google_Tests_run.dir/testGameClass.cpp.o"
+  "/cygdrive/c/Users/cool8/CLionProjects/untitled1/tests/test.cpp" "/cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug/tests/CMakeFiles/Google_Tests_run.dir/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

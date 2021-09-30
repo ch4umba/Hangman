@@ -66,18 +66,18 @@ include tests/CMakeFiles/Google_Tests_run.dir/progress.make
 # Include the compile flags for this target's objects.
 include tests/CMakeFiles/Google_Tests_run.dir/flags.make
 
-tests/CMakeFiles/Google_Tests_run.dir/testGameClass.cpp.o: tests/CMakeFiles/Google_Tests_run.dir/flags.make
-tests/CMakeFiles/Google_Tests_run.dir/testGameClass.cpp.o: ../tests/testGameClass.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/Google_Tests_run.dir/testGameClass.cpp.o"
-	cd /cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug/tests && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Google_Tests_run.dir/testGameClass.cpp.o -c /cygdrive/c/Users/cool8/CLionProjects/untitled1/tests/testGameClass.cpp
+tests/CMakeFiles/Google_Tests_run.dir/test.cpp.o: tests/CMakeFiles/Google_Tests_run.dir/flags.make
+tests/CMakeFiles/Google_Tests_run.dir/test.cpp.o: ../tests/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/Google_Tests_run.dir/test.cpp.o"
+	cd /cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug/tests && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Google_Tests_run.dir/test.cpp.o -c /cygdrive/c/Users/cool8/CLionProjects/untitled1/tests/test.cpp
 
-tests/CMakeFiles/Google_Tests_run.dir/testGameClass.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Google_Tests_run.dir/testGameClass.cpp.i"
-	cd /cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug/tests && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/cool8/CLionProjects/untitled1/tests/testGameClass.cpp > CMakeFiles/Google_Tests_run.dir/testGameClass.cpp.i
+tests/CMakeFiles/Google_Tests_run.dir/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Google_Tests_run.dir/test.cpp.i"
+	cd /cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug/tests && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/cool8/CLionProjects/untitled1/tests/test.cpp > CMakeFiles/Google_Tests_run.dir/test.cpp.i
 
-tests/CMakeFiles/Google_Tests_run.dir/testGameClass.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Google_Tests_run.dir/testGameClass.cpp.s"
-	cd /cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug/tests && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/cool8/CLionProjects/untitled1/tests/testGameClass.cpp -o CMakeFiles/Google_Tests_run.dir/testGameClass.cpp.s
+tests/CMakeFiles/Google_Tests_run.dir/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Google_Tests_run.dir/test.cpp.s"
+	cd /cygdrive/c/Users/cool8/CLionProjects/untitled1/cmake-build-debug/tests && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/cool8/CLionProjects/untitled1/tests/test.cpp -o CMakeFiles/Google_Tests_run.dir/test.cpp.s
 
 tests/CMakeFiles/Google_Tests_run.dir/__/src/Game.cpp.o: tests/CMakeFiles/Google_Tests_run.dir/flags.make
 tests/CMakeFiles/Google_Tests_run.dir/__/src/Game.cpp.o: ../src/Game.cpp
@@ -107,14 +107,14 @@ tests/CMakeFiles/Google_Tests_run.dir/__/src/Themes.cpp.s: cmake_force
 
 # Object files for target Google_Tests_run
 Google_Tests_run_OBJECTS = \
-"CMakeFiles/Google_Tests_run.dir/testGameClass.cpp.o" \
+"CMakeFiles/Google_Tests_run.dir/test.cpp.o" \
 "CMakeFiles/Google_Tests_run.dir/__/src/Game.cpp.o" \
 "CMakeFiles/Google_Tests_run.dir/__/src/Themes.cpp.o"
 
 # External object files for target Google_Tests_run
 Google_Tests_run_EXTERNAL_OBJECTS =
 
-tests/Google_Tests_run.exe: tests/CMakeFiles/Google_Tests_run.dir/testGameClass.cpp.o
+tests/Google_Tests_run.exe: tests/CMakeFiles/Google_Tests_run.dir/test.cpp.o
 tests/Google_Tests_run.exe: tests/CMakeFiles/Google_Tests_run.dir/__/src/Game.cpp.o
 tests/Google_Tests_run.exe: tests/CMakeFiles/Google_Tests_run.dir/__/src/Themes.cpp.o
 tests/Google_Tests_run.exe: tests/CMakeFiles/Google_Tests_run.dir/build.make
