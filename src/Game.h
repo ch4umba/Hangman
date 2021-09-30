@@ -133,7 +133,7 @@ private:
 
     string word;
     string outWord;
-    int _phase = 0;
+    unsigned int _phase = 0;
 
     static int getch();
 

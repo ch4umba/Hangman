@@ -314,13 +314,13 @@ string Game::getTheme()
     clrscr();
     auto iter = themes.themes.begin();
     cout << "List of topics:" << endl;
-    int k = 1;
+    unsigned int k = 1;
     for (const auto& i : themes.themes) {
         cout << k++ << ". " << i.first << endl;
     }
     cout << endl << "Topic number:";
     cin >> k;
-    if (k <= 0 || k > themes.themes.size()) {
+    if (k == 0 || k > themes.themes.size()) {
         return "";
     }
     for (int i = 0; i + 1 != k; i++, iter++) {
