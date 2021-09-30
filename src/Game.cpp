@@ -238,6 +238,7 @@ void Game::Play()
                     cout << alpha[k];
                     break;
                 }
+                default: break;
             }
         } else if (c == 10) {
             checkWord(i, j);
