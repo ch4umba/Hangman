@@ -82,7 +82,7 @@ void Game::outputMenu(int i)
 void Game::outputWord(const string& word)
 {
     for (int i = 0; i < word.size(); i++) {
-        cout << ' ' << word[i]   << ' ';
+        cout << ' ' << word[i] << ' ';
     }
 }
 
@@ -170,10 +170,7 @@ void Game::Play()
         if (c == '\033') {
             getch();
             switch (getch()) {
-                case 'B':
-                    gotoXY(i, j);
-                    defcolor();
-                    cout << alpha[k];
+                case 'B': gotoXY(i, j); defcolor(); cout << alpha[k];
                     if (k > 12) {
                         gotoXY(i, --j);
                         k -= 13;
