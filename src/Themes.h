@@ -32,4 +32,4 @@ public:
     void addFileWords(std::string path);
 };
 
-#endif //UNTITLED1_THEMES_H
+#endif

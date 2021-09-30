@@ -144,7 +144,7 @@ private:
 
     static void outputMenu(int i);
 
-    static void outputWord(const string &word);
+    static void outputWord(const string& word);
 
     static void outputSettings(int i);
 
@@ -165,12 +165,12 @@ private:
 public:
     void Menu();
 
-    static bool isWin(const string &word);
+    static bool isWin(const string& word);
 
-    void setWord(const string &theme);
+    void setWord(const string& theme);
 
     bool checkWord(int i, int j);
 };
 
 
-#endif //UNTITLED1_GAME_H
+#endif
