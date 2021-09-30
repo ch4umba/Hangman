@@ -81,7 +81,7 @@ void Game::outputMenu(int i)
 
 void Game::outputWord(const string& word)
 {
-    for (int i = 0; i < word.size(); i++) {
+    for (unsigned int i = 0; i < word.size(); i++) {
         cout << ' ' << word[i] << ' ';
     }
 }
@@ -323,7 +323,7 @@ string Game::getTheme()
     if (k == 0 || k > themes.themes.size()) {
         return "";
     }
-    for (int i = 0; i + 1 != k; i++, iter++) {
+    for (unsigned int i = 0; i + 1 != k; i++, iter++) {
         continue;
     }
     clrscr();
