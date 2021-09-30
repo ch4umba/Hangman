@@ -1,6 +1,6 @@
 dist: xenial
 language: c++
-compiler: g++ -std=c++14
+compiler: g++ -std=gnu++14
 
 script:
   - make
