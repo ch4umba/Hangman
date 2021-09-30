@@ -170,75 +170,72 @@ void Game::Play()
         if (c == '\033') {
             getch();
             switch (getch()) {
-                case 'B':
-                {
-                    gotoXY(i, j);
-                    defcolor();
-                    cout << alpha[k];
-                    if (k > 12) {
-                        gotoXY(i, --j);
-                        k -= 13;
-                    } else {
-                        gotoXY(i, ++j);
-                        k += 13;
-                    }
-                    setFGColor();
-                    setBGColor();
-                    cout << alpha[k];
-                    break;
+            case 'B': {
+                gotoXY(i, j);
+                defcolor();
+                cout << alpha[k];
+                if (k > 12) {
+                    gotoXY(i, --j);
+                    k -= 13;
+                } else {
+                    gotoXY(i, ++j);
+                    k += 13;
                 }
-                case 'A':
-                {
-                    gotoXY(i, j);
-                    defcolor();
-                    cout << alpha[k];
-                    if (k < 12) {
-                        gotoXY(i, ++j);
-                        k += 13;
-                    } else {
-                        gotoXY(i, --j);
-                        k -= 13;
-                    }
-                    setFGColor();
-                    setBGColor();
-                    cout << alpha[k];
-                    break;
+                setFGColor();
+                setBGColor();
+                cout << alpha[k];
+                break;
+            }
+            case 'A': {
+                gotoXY(i, j);
+                defcolor();
+                cout << alpha[k];
+                if (k < 12) {
+                    gotoXY(i, ++j);
+                    k += 13;
+                } else {
+                    gotoXY(i, --j);
+                    k -= 13;
                 }
-                case 'D':
-                {
-                    gotoXY(i, j);
-                    defcolor();
-                    cout << alpha[k];
-                    if (k == 0 || k == 13) {
-                        gotoXY(i += 49, j);
-                        k += 12;
-                    } else {
-                        (i == 5) ? gotoXY(i -= 5, j) : gotoXY(i -= 4, j);
-                        k--;
-                    }
-                    setFGColor();
-                    setBGColor();
-                    cout << alpha[k];
-                    break;
+                setFGColor();
+                setBGColor();
+                cout << alpha[k];
+                break;
+            }
+            case 'D': {
+                gotoXY(i, j);
+                defcolor();
+                cout << alpha[k];
+                if (k == 0 || k == 13) {
+                    gotoXY(i += 49, j);
+                    k += 12;
+                } else {
+                    (i == 5) ? gotoXY(i -= 5, j) : gotoXY(i -= 4, j);
+                    k--;
                 }
-                case 'C':
-                {
-                    gotoXY(i, j);
-                    defcolor();
-                    cout << alpha[k];
-                    if (k == 12 || k == 25) {
-                        gotoXY(i -= 48, j);
-                        k -= 12;
-                    } else {
-                        (i == 0) ? gotoXY(i += 5, j) : gotoXY(i += 4, j);
-                        k++;
-                    }
-                    setFGColor();
-                    setBGColor();
-                    cout << alpha[k];
-                    break;
+                setFGColor();
+                setBGColor();
+                cout << alpha[k];
+                break;
+            }
+            case 'C': {
+                gotoXY(i, j);
+                defcolor();
+                cout << alpha[k];
+                if (k == 12 || k == 25) {
+                    gotoXY(i -= 48, j);
+                    k -= 12;
+                } else {
+                    (i == 0) ? gotoXY(i += 5, j) : gotoXY(i += 4, j);
+                    k++;
                 }
-                default: break;
+                setFGColor();
+                setBGColor();
+                cout << alpha[k];
+                break;
+            }
+            default:
+                break;
             }
         } else if (c == 10) {
             checkWord(i, j);
@@ -268,18 +265,16 @@ void Game::Settings()
         if (c == '\033') {
             getch();
             switch (getch()) {
-                case 'A':
-                {
-                    clrscr();
-                    outputSettings(--i % 3);
-                    break;
-                }
-                case 'B':
-                {
-                    clrscr();
-                    outputSettings(++i % 3);
-                    break;
-                }
+            case 'A': {
+                clrscr();
+                outputSettings(--i % 3);
+                break;
+            }
+            case 'B': {
+                clrscr();
+                outputSettings(++i % 3);
+                break;
+            }
             }
         } else if (c == 10) {
             clrscr();
@@ -320,7 +315,7 @@ string Game::getTheme()
     auto iter = themes.themes.begin();
     cout << "List of topics:" << endl;
     int k = 1;
-    for (const auto& i: themes.themes) {
+    for (const auto& i : themes.themes) {
         cout << k++ << ". " << i.first << endl;
     }
     cout << endl << "Topic number:";
@@ -328,7 +323,9 @@ string Game::getTheme()
     if (k <= 0 || k > themes.themes.size()) {
         return "";
     }
-    for (int i = 0; i + 1 != k; i++, iter++) { continue; }
+    for (int i = 0; i + 1 != k; i++, iter++) {
+        continue;
+    }
     clrscr();
     return iter->first;
 }
@@ -343,30 +340,30 @@ void Game::Menu()
         if (c == '\033') {
             getch();
             switch (getch()) {
-                case 'A':
+            case 'A':
+                clrscr();
+                outputMenu(--i % 3);
+                break;
+            case 'B':
+                clrscr();
+                outputMenu(++i % 3);
+                break;
+            case 10:
+                clrscr();
+                if (i % 3 == 0) {
+                    Play();
                     clrscr();
-                    outputMenu(--i % 3);
-                    break;
-                case 'B':
-                    clrscr();
-                    outputMenu(++i % 3);
-                    break;
-                case 10:
-                    clrscr();
-                    if (i % 3 == 0) {
-                        Play();
-                        clrscr();
-                        i = 0;
-                        outputMenu(i % 3);
-                        _phase = 0;
-                        outWord.resize(word.size(), '_');
-                    }
-                    if (i % 3 == 1) {
-                        Settings();
-                    }
-                    if (i % 3 == 2) {
-                        return;
-                    }
+                    i = 0;
+                    outputMenu(i % 3);
+                    _phase = 0;
+                    outWord.resize(word.size(), '_');
+                }
+                if (i % 3 == 1) {
+                    Settings();
+                }
+                if (i % 3 == 2) {
+                    return;
+                }
             }
         } else if (c == 10) {
             clrscr();
