@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/cool8/CLionProjects/untitled1/src/Game.cpp
+Game.h
+/cygdrive/c/Users/cool8/CLionProjects/untitled1/src/Game.h
+
+/cygdrive/c/Users/cool8/CLionProjects/untitled1/src/Game.h
+Themes.h
+/cygdrive/c/Users/cool8/CLionProjects/untitled1/src/Themes.h
+cstdio
+-
+ctime
+-
+sys/ioctl.h
+-
+termios.h
+-
+
+/cygdrive/c/Users/cool8/CLionProjects/untitled1/src/Themes.cpp
+Themes.h
+/cygdrive/c/Users/cool8/CLionProjects/untitled1/src/Themes.h
+
+/cygdrive/c/Users/cool8/CLionProjects/untitled1/src/Themes.h
+fstream
+-
+iostream
+-
+map
+-
+string
+-
+unistd.h
+-
+vector
+-
+
+/cygdrive/c/Users/cool8/CLionProjects/untitled1/src/main.cpp
+Game.h
+/cygdrive/c/Users/cool8/CLionProjects/untitled1/src/Game.h
+

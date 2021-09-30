@@ -1,0 +1,10 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <clangFormatSettings>
+      <option name="ENABLED" value="true" />
+    </clangFormatSettings>
+    <codeStyleSettings language="ObjectiveC">
+      <option name="SPACE_WITHIN_SWITCH_PARENTHESES" value="true" />
+    </codeStyleSettings>
+  </code_scheme>
+</component>
